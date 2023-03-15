@@ -1,28 +1,48 @@
-# AgGrid
+## PrimeNG
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+### Advantages
 
-## Development server
+- Has virtualization out of the box
+- Supports tree hierarchy
+- Supports drag and drop (internal, external)
+- Allows manual assignment (click, no drag)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Disadvantages
 
-## Code scaffolding
+- Questionable library quality (not all components are technically functioning properly)
+- Project looks undermaintained (certain known issues are not being fixed for a long time)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## AG Grid
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Advantages
 
-## Running unit tests
+- Has virtualization out of the box
+- Supports tree hierarchy
+- Suports drag and drop (internal, external)
+- Allows manual assignment (click, no drag)
+- Has search and filter functionality built in
+- Has select all functionality built in
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Disadvantages
 
-## Running end-to-end tests
+- Contains a lot of functionality that is not going to be used
+- Design is absent (Ag grid could be styled to look the same as current design)
+- Some additional time will be needed for developers to learn ag grid (the team has no prior experience with this library)
+- Will require writing custom styles
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+### Conclusion
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# ag-grid-spike
+Both PrimeNG and AG Grid allow to solve UX problems. PrimeNG is easier to pick up and start development.
+It also has partially ready design. Quality of the library is questionable, but all the required functionality
+is supported or could be developed with minor fixes for the library components
+(search, filter, sorting must be developed from scratch, tree hierarchy has known bug, that should be fixed).
+
+Ag grid offers a lot more functionality out of the box (search, filter, select all, sort).
+It will require additional time for the team to learn it. But, this time will be compensated by built in functionality.
+Ag grid does not have a design yet. But, Ag grid could be styled to look like current UX solution.
+
+The amount of effort to solve the UX problems by using AG grid or PrimeNG is expected to be same.
