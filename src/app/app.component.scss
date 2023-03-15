@@ -1,0 +1,14 @@
+:host::ng-deep {
+  .ag-row {
+    border-color: transparent !important;
+    background-color: white;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 4rem;
+}

@@ -1,0 +1,22 @@
+<div class="accounts-grid">
+  <div class="search-input">
+    <input
+      style="width: 392px"
+      type="text"
+      id="search-text-box"
+      placeholder="Filter..."
+      (input)="onFilterTextBoxChanged()"
+    />
+  </div>
+  <ag-grid-angular
+    style="width: 400px; height: 600px"
+    class="ag-theme-alpine"
+    [rowData]="rowData$ | async"
+    [headerHeight]="0"
+    [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)"
+    [rowSelection]="'multiple'"
+    [rowMultiSelectWithClick]="true"
+  >
+  </ag-grid-angular>
+</div>

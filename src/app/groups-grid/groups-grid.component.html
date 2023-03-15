@@ -1,0 +1,39 @@
+<div class="grid-container">
+  <div class="action-buttons">
+    <button (click)="addNewGroup()">Assign account</button>
+
+    <button (click)="moveSelectedNodeToTarget('0')">
+      Reassign to Penguins
+    </button>
+
+    <button (click)="removeSelected()">Unassign account</button>
+  </div>
+
+  <div class="search-input">
+    <input
+      style="width: 392px"
+      type="text"
+      id="filter-text-box"
+      placeholder="Filter..."
+      (input)="onFilterTextBoxChanged()"
+    />
+  </div>
+
+  <ag-grid-angular
+    style="width: 400px; height: 562px"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [treeData]="true"
+    [columnDefs]="columnDefs"
+    [autoGroupColumnDef]="autoGroupColumnDef"
+    [animateRows]="true"
+    [gridOptions]="gridOptions"
+    (gridReady)="onGridReady($event)"
+    (rowDragEnd)="onRowDragEnd($event)"
+    [rowSelection]="'multiple'"
+    [rowMultiSelectWithClick]="true"
+  >
+  </ag-grid-angular>
+</div>
+<!-- [headerHeight]="0" -->
+<!-- [rowDragManaged]="true" -->
